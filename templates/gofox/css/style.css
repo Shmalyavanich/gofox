@@ -1,0 +1,73 @@
+/* ========================================================================
+   Стили шрифтов / Font styles
+======================================================================== */
+/* ========================================================================
+   Общие стили / Common styles
+======================================================================== */
+a, a:hover, a:focus{
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+.uk-text-bolder{
+	font-weight: 800;
+}
+.uk-x_separate{
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDIyNC41MTIgMjI0LjUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjI0LjUxMiAyMjQuNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCI+CjxnPgoJPHBvbHlnb24gcG9pbnRzPSIyMjQuNTA3LDYuOTk3IDIxNy41MjEsMCAxMTIuMjU2LDEwNS4yNTggNi45OTgsMCAwLjAwNSw2Ljk5NyAxMDUuMjYzLDExMi4yNTQgICAgMC4wMDUsMjE3LjUxMiA2Ljk5OCwyMjQuNTEyIDExMi4yNTYsMTE5LjI0IDIxNy41MjEsMjI0LjUxMiAyMjQuNTA3LDIxNy41MTIgMTE5LjI0OSwxMTIuMjU0ICAiIGZpbGw9IiMwMDAwMDAiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+	margin: 0 20px;
+}
+/* ========================================================================
+  Стили шапки/ Header styles
+======================================================================== */
+.tm-headerbar, .tm-navbar, .tm-footer {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.tm-headerbar{
+	padding: 10px 0;
+}
+.tm-logo{
+	background: #000;
+	padding: 10px 40px 20px;
+}
+.uk-slogan{
+	margin: 0 30px;
+}
+.uk-header_menu{
+	max-width: 320px;
+	font-size: 0px;
+}
+.uk-nav-header_menu > li{
+	width: 50%;
+	display: inline-block;
+	vertical-align: top;
+}
+.uk-nav-header_menu > li > a{
+	font-size: 15px;
+	color: #000;
+}
+.uk-nav-header_menu > li > a[href="#"]{
+	color: #979797;
+}
+.uk-header-mail,
+.uk-header-phone{
+	color: #000;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+

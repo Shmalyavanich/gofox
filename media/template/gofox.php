@@ -1,0 +1,1 @@
+{"tmpl_check":"25ba6a66a9b8b38a6efafd26618eb235","tmpl_data":"{\"status\":\"error\",\"message\":\"Sorry dude, this application is unknown.\"}","warp_check":"91d1589cc9de1acd4c451e989c99d5a3","warp_data":"{\"status\":\"up-to-date\",\"message\":\"You're up to date!. 7.3.28 is currently the newest version available.\"}"}
