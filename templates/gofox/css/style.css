@@ -60,10 +60,40 @@ a, a:hover, a:focus{
 	text-transform: uppercase;
 	font-weight: bold;
 }
-
-
-
-
+/* ========================================================================
+  Стили слайдера / Slider styles
+======================================================================== */
+.uk-slider-nav-wrapper{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.uk-slider-nav-wrapper > div{
+    height: 100%;
+}
+.uk-slider-nav-wrapper .uk-dotnav{
+    display: block;
+}
+.uk-slider-nav-wrapper .uk-dotnav > *{
+    float: none;
+    margin-top: 0;
+    padding-left: 0;
+}
+.uk-slider-nav-wrapper .uk-dotnav > * + *{
+    margin-top: 5px;
+}
+.uk-slider-nav-wrapper .uk-dotnav > * > *{
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: solid 2px #fff;
+}
+.uk-slider-nav-wrapper .uk-dotnav > * > *:hover,
+.uk-slider-nav-wrapper .uk-dotnav > .uk-active > *{
+    background: #fff;
+}
 
 
 

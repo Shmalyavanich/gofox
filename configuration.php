@@ -15,7 +15,7 @@ class JConfig {
 	public $host = 'localhost';
 	public $user = 'root';
 	public $password = '';
-	public $db = 'gofox_db';
+	public $db = 'gofox';
 	public $dbprefix = 'njt6r_';
 	public $live_site = '';
 	public $secret = 'Jk63wEV20n45LgwD';
