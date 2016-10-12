@@ -116,11 +116,7 @@ include($this['path']->path('layouts:theme.config.php'));
 	<?php if ($this['widgets']->count('top-b')) : ?>
 	<section id="tm-top-b" class="<?php echo $grid_classes['top-b']; echo $display_classes['top-b']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
 	
-		<div class="uk-container uk-container-center">
-		
-			<?php echo $this['widgets']->render('top-b', array('layout'=>$this['config']->get('grid.top-b.layout'))); ?>
-	
-		</div>
+		<?php echo $this['widgets']->render('top-b', array('layout'=>$this['config']->get('grid.top-b.layout'))); ?>
 		
 	</section>
 	<?php endif; ?>

@@ -21,6 +21,9 @@ a, a:hover, a:focus{
     background-position: center;
 	margin: 0 20px;
 }
+.uk-text-uppercase{
+	text-transform: uppercase;
+}
 /* ========================================================================
   Стили шапки/ Header styles
 ======================================================================== */
@@ -94,10 +97,113 @@ a, a:hover, a:focus{
 .uk-slider-nav-wrapper .uk-dotnav > .uk-active > *{
     background: #fff;
 }
-
-
-
-
-
+/* ========================================================================
+  Стили блока услуг / Services block styles
+======================================================================== */
+.uk-services-block{
+	background: url(/images/icons/services-bg.jpg) no-repeat center;
+	background-size: cover;
+	padding: 60px 0;
+}
+.uk-services-item-icon{
+	height: 210px;
+	width: 180px;
+	margin: 0 auto;
+}
+.uk-services-item-price{
+	width: 150px;
+	height: 150px;
+	top: 15px;
+	left: 15px;
+	background: #000;
+	z-index: 3;
+}
+.uk-services-item-border-top{
+	width: 180px;
+	height: 15px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.uk-services-item-border-right{
+	width: 15px;
+	height: 150px;
+	background: #fff;
+	position: absolute;
+	top: 15px;
+	right: 0;
+	z-index: 2;
+}
+.uk-services-item-border-bottom{
+	width: 180px;
+	height: 15px;
+	background: #fff;
+	position: absolute;
+	top: 165px;
+	left: 0;
+	z-index: 2;
+}
+.uk-services-item-border-left{
+	width: 15px;
+	height: 150px;
+	background: #fff;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	z-index: 2;
+}
+.uk-services-item-icon:hover .uk-services-item-price{
+	height: 60px;
+	top: 45px;
+	transition: all 0.4s ease;
+}
+.uk-services-item-icon:hover .uk-services-item-border-left,
+.uk-services-item-icon:hover .uk-services-item-border-right{
+	height: 60px;
+	top: 45px;
+	transition: all 0.4s ease;
+}
+.uk-services-item-icon:hover .uk-services-item-border-top{
+	top: 30px;
+	transition: all 0.4s ease;
+}
+.uk-services-item-icon:hover .uk-services-item-border-bottom{
+	top: 105px;
+	transition: all 0.4s ease;
+}
+.uk-services-item-icon-bottom{
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+    height: 60px;
+	z-index: 1;
+}
+.uk-services-item-icon-bottom:before{
+	content: "";
+	width: 94px;
+	height: 15px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 5px;
+	transform: rotate(35deg) skewX(35deg);
+}
+.uk-services-item-icon-bottom:after{
+	content: "";
+	width: 94px;
+	height: 15px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	right: 5px;
+	transform: rotate(-35deg) skewX(-35deg);
+}
+.uk-services-item-icon:hover .uk-services-item-icon-bottom{
+	top: 120px;
+	transition: all 1.2s ease-in;
+}
 
 
