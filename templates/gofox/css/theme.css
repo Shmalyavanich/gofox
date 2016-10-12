@@ -3116,15 +3116,15 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-form input[type="tel"],
 .uk-form input[type="color"] {
   /* 1 */
-  height: 30px;
+  height: 56px;
   /* 2 */
   max-width: 100%;
   /* 3 */
-  padding: 4px 6px;
+  padding: 10px 30px;
   /* 4 */
-  border: 1px solid #dddddd;
-  background: #ffffff;
-  color: #000000;
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
   -webkit-transition: all 0.2s linear;
   -webkit-transition-property: border, background, color, box-shadow, padding;
   transition: all 0.2s linear;
@@ -3147,10 +3147,10 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-form input[type="search"]:focus,
 .uk-form input[type="tel"]:focus,
 .uk-form input[type="color"]:focus {
-  border-color: #99baca;
+  border-color: #ff9200;
   outline: 0;
-  background: #f5fbfe;
-  color: #000000;
+  background: rgba(0, 0, 0, 0);
+  color: #ffffff;
 }
 .uk-form select:disabled,
 .uk-form textarea:disabled,
@@ -3177,13 +3177,13 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  * Placeholder
  */
 .uk-form :-ms-input-placeholder {
-  color: #999999 !important;
+  color: #ffffff !important;
 }
 .uk-form ::-moz-placeholder {
-  color: #999999;
+  color: #ffffff;
 }
 .uk-form ::-webkit-input-placeholder {
-  color: #999999;
+  color: #ffffff;
 }
 .uk-form :disabled:-ms-input-placeholder {
   color: #999999 !important;
@@ -3305,7 +3305,7 @@ select.uk-form-width-mini {
   width: 200px;
 }
 .uk-form-width-large {
-  width: 500px;
+  width: 610px;
 }
 /* Sub-objects: `uk-form-row`
  * Groups labels and controls in rows
@@ -3466,14 +3466,14 @@ select.uk-form-width-mini {
   overflow: visible;
   /* 5 */
   font: inherit;
-  color: #000000;
+  color: #ffffff;
   /* 6 */
   text-transform: none;
   /* 7 */
   display: inline-block;
   box-sizing: border-box;
   padding: 0 12px;
-  background: #eeeeee;
+  background: #ff9200;
   vertical-align: middle;
   /* 8 */
   line-height: 30px;
@@ -3496,8 +3496,8 @@ select.uk-form-width-mini {
  */
 .uk-button:hover,
 .uk-button:focus {
-  background-color: #f5f5f5;
-  color: #000000;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
   /* 2 */
   outline: none;
   /* 3 */
@@ -3621,10 +3621,10 @@ select.uk-form-width-mini {
   font-size: 12px;
 }
 .uk-button-large {
-  min-height: 40px;
-  padding: 0 15px;
-  line-height: 40px;
-  font-size: 16px;
+  min-height: 56px;
+  padding: 0 30px;
+  line-height: 56px;
+  font-size: 20px;
 }
 /* Sub-object `uk-button-group`
  ========================================================================== */
@@ -6680,22 +6680,22 @@ a.uk-thumbnail:focus {
  * Add margin if adjacent element
  */
 .uk-margin {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 * + .uk-margin {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .uk-margin-top {
-  margin-top: 20px !important;
+  margin-top: 10px !important;
 }
 .uk-margin-bottom {
-  margin-bottom: 20px !important;
+  margin-bottom: 10px !important;
 }
 .uk-margin-left {
-  margin-left: 20px !important;
+  margin-left: 10px !important;
 }
 .uk-margin-right {
-  margin-right: 20px !important;
+  margin-right: 10px !important;
 }
 /*
  * Larger margins

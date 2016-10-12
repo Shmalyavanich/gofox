@@ -178,17 +178,13 @@ include($this['path']->path('layouts:theme.config.php'));
 	<?php if ($this['widgets']->count('bottom-b')) : ?>
 	<section id="tm-bottom-b" class="<?php echo $grid_classes['bottom-b']; echo $display_classes['bottom-b']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
 	
-		<div class="uk-container uk-container-center">
-		
-			<?php echo $this['widgets']->render('bottom-b', array('layout'=>$this['config']->get('grid.bottom-b.layout'))); ?>
-			
-		</div>
+		<?php echo $this['widgets']->render('bottom-b', array('layout'=>$this['config']->get('grid.bottom-b.layout'))); ?>
 	
 	</section>
 	<?php endif; ?>
 
 	<?php if ($this['widgets']->count('footer + debug') || $this['config']->get('warp_branding', true) || $this['config']->get('totop_scroller', true)) : ?>
-	<footer id="tm-footer" class="tm-footer">
+	<footer id="tm-footer" class="tm-footer uk-text-left">
 
 		<div class="uk-container uk-container-center">
 		

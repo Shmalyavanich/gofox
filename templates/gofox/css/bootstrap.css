@@ -940,8 +940,8 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  background-color: #ffffff;
-  border: 1px solid #dddddd;
+  background-color: transparent;
+  border: 1px solid #ffffff;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -1002,8 +1002,8 @@ input[type="file"] {
 }
 select {
   width: 220px;
-  border: 1px solid #dddddd;
-  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  background-color: transparent;
 }
 select[multiple],
 select[size] {
@@ -1020,8 +1020,8 @@ input[type="checkbox"]:focus {
 .uneditable-input,
 .uneditable-textarea {
   color: #999999;
-  background-color: #fcfcfc;
-  border-color: #dddddd;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #ffffff;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025);
@@ -1037,15 +1037,15 @@ input[type="checkbox"]:focus {
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #999999;
+  color: #ffffff;
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-  color: #999999;
+  color: #ffffff;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #999999;
+  color: #ffffff;
 }
 .radio,
 .checkbox {
@@ -3678,7 +3678,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .navbar-search .search-query {
   color: #ffffff;
   background-color: #ffffff;
-  border-color: #dddddd;
+  border-color: #ffffff;
   -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
   -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
   box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
@@ -3688,20 +3688,20 @@ input[type="submit"].btn.btn-mini {
   transition: none;
 }
 .navbar-inverse .navbar-search .search-query:-moz-placeholder {
-  color: #999999;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-search .search-query:-ms-input-placeholder {
-  color: #999999;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-search .search-query::-webkit-input-placeholder {
-  color: #999999;
+  color: #ffffff;
 }
 .navbar-inverse .navbar-search .search-query:focus,
 .navbar-inverse .navbar-search .search-query.focused {
   padding: 5px 15px;
   color: #595959;
   text-shadow: 0 1px 0 #ffffff;
-  background-color: #f5fbfe;
+  background-color: rgba(0, 0, 0, 0);
   border: 0;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
@@ -6236,7 +6236,7 @@ fieldset.radio.btn-group {
 /* Common styling for Chosen Select Boxes with Input Prepend/Append */
 .input-prepend .chzn-container-single .chzn-single,
 .input-append .chzn-container-single .chzn-single {
-  border-color: #dddddd;
+  border-color: #ffffff;
   height: 26px;
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
@@ -6244,7 +6244,7 @@ fieldset.radio.btn-group {
 }
 .input-prepend .chzn-container-single .chzn-drop,
 .input-append .chzn-container-single .chzn-drop {
-  border-color: #dddddd;
+  border-color: #ffffff;
 }
 .input-prepend > .add-on,
 .input-append > .add-on {
@@ -7165,8 +7165,8 @@ th .tooltip-inner {
   text-shadow: none;
   /* Overrides */
   line-height: 22px;
-  background: #eeeeee;
-  color: #000000;
+  background: #ff9200;
+  color: #ffffff;
 }
 .btn:hover,
 .btn:focus {
@@ -7175,8 +7175,8 @@ th .tooltip-inner {
   -webkit-transition: none;
   transition: none;
   /* Overrides */
-  background-color: #f5f5f5;
-  color: #000000;
+  background-color: rgba(0, 0, 0, 0);
+  color: #ffffff;
 }
 .btn.active,
 .btn:active {
@@ -7275,7 +7275,7 @@ th .tooltip-inner {
   /* Reset */
   margin-bottom: 0;
   /* Overrides */
-  border-top-color: #000000;
+  border-top-color: #ffffff;
 }
 .btn [class^="icon-"],
 .btn [class*=" icon-"] {
@@ -7319,7 +7319,7 @@ input[type="color"],
   /* Overrides */
   height: 22px;
   line-height: 22px;
-  color: #000000;
+  color: #ffffff;
 }
 select:focus,
 textarea:focus,
@@ -7341,12 +7341,12 @@ input[type="color"]:focus,
   /* Reset */
   box-shadow: none;
   /* Overrides */
-  border-color: #99baca;
+  border-color: #ff9200;
   outline: 0;
-  background: #f5fbfe;
+  background: rgba(0, 0, 0, 0);
 }
 select {
-  border-color: #dddddd;
+  border-color: #ffffff;
 }
 select,
 input[type="file"] {
@@ -7363,8 +7363,8 @@ input[type="file"] {
   /* Overrides */
   height: 22px;
   line-height: 22px;
-  border-color: #dddddd;
-  background-color: #f2f2f2;
+  border-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
 }
 .row-fluid input[class*="span"] {
   min-height: 22px;

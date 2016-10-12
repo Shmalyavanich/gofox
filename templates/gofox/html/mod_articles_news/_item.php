@@ -1,12 +1,32 @@
 <?php
 /**
-* @package   yoo_master2
+* @package   Warp Theme Framework
 * @author    YOOtheme http://www.yootheme.com
 * @copyright Copyright (C) YOOtheme GmbH
 * @license   http://www.gnu.org/licenses/gpl.html GNU/GPL
 */
 
-// include config and layout
-$base = dirname(dirname(__FILE__));
-include($base.'/config.php');
-include($warp['path']->path('layouts:'.preg_replace('/'.preg_quote($base, '/').'/', '', __FILE__, 1)));
+// no direct access
+defined('_JEXEC') or die;
+
+?>
+
+<?php if ($params->get('item_title')) : ?>
+<div class="uk-blog_latest-item-title uk-h3 uk-text-bold uk-margin-bottom">
+	<?php if ($params->get('link_titles') && $item->link != '') : ?>
+		<a href="<?php echo $item->link; ?>"><?php echo $item->title;?></a>
+	<?php else : ?>
+		<?php echo $item->title; ?>
+	<?php endif; ?>
+</div>
+<?php endif; ?>
+
+<?php if (!$params->get('intro_only')) echo $item->afterDisplayTitle; ?>
+
+<?php echo $item->beforeDisplayContent; ?>
+
+<?php echo $item->introtext; ?>
+
+<?php if (isset($item->link) && $item->readmore && $params->get('readmore')) :
+	echo '<a href="'.$item->link.'">'.$item->linkText.'</a>';
+endif;
