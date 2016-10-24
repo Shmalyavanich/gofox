@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
 <extension version="2.5" type="template" client="site" method="upgrade">
-	<name>Gofox</name>
+	<name>Gofox2</name>
 	<version>1.0.0</version>
-	<creationDate>March 2014</creationDate>
+	<creationDate>October 2016</creationDate>
 	<author>YOOtheme</author>
 	<authorEmail>info@yootheme.com</authorEmail>
 	<authorUrl>http://www.yootheme.com</authorUrl>
@@ -60,7 +60,7 @@
         <position settings="">debug</position>
     </positions>
 	<config>
-		<fields name="params" addfieldpath="/templates/gofox/warp/systems/joomla/config/elements">
+		<fields name="params" addfieldpath="/templates/gofox2/warp/systems/joomla/config/elements">
 			<fieldset name="options">
 		    	<field name="config" type="config" label="Config" description="" default="" />
 			</fieldset>

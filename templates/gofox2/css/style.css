@@ -1,0 +1,303 @@
+/* ========================================================================
+   Стили шрифтов / Font styles
+======================================================================== */
+/* ========================================================================
+   Общие стили / Common styles
+======================================================================== */
+a, a:hover, a:focus{
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+.uk-text-underline{
+	text-decoration: underline;
+}
+.uk-text-uppercase{
+	text-transform: uppercase;
+}
+.uk-selected{
+	background: #ff9200;
+	display: inline-block;
+	padding: 0 5px;
+}
+.uk-slide-title{
+	font-size: 40px;
+	line-height: 46px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.uk-slide-selected{
+	font-size: 40px;
+	line-height: 46px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/* ========================================================================
+  Стили шапки/ Header styles
+======================================================================== */
+.tm-headerbar, .tm-navbar, .tm-footer {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.tm-headerbar{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	padding: 10px 0;
+}
+.tm-logo{
+	padding: 10px 40px 20px;
+	margin: 0 20px;
+}
+.uk-header_menu{
+	
+}
+.uk-nav-header_menu > li{
+	display: inline-block;
+}
+.uk-nav-header_menu > li + li{
+	margin-left: 40px;
+}
+.uk-nav-header_menu > li > a{
+	font-size: 16px;
+	color: #fff;
+}
+.uk-nav-header_menu > li > a[href="#"]{
+	color: rgba(255, 255, 255, 0.5);
+}
+.uk-header-contacts{
+	margin-left: 60px;
+}
+.uk-header-phone{
+	
+}
+/* ========================================================================
+  Стили слайдера / Slider styles
+======================================================================== */
+.uk-slider-nav-wrapper{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.uk-slider-nav-wrapper > div{
+    height: 100%;
+}
+.uk-slider-nav-wrapper .uk-dotnav{
+    display: block;
+}
+.uk-slider-nav-wrapper .uk-dotnav > *{
+    float: none;
+    margin-top: 0;
+    padding-left: 0;
+}
+.uk-slider-nav-wrapper .uk-dotnav > * + *{
+    margin-top: 5px;
+}
+.uk-slider-nav-wrapper .uk-dotnav > * > *{
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: solid 2px #fff;
+}
+.uk-slider-nav-wrapper .uk-dotnav > * > *:hover,
+.uk-slider-nav-wrapper .uk-dotnav > .uk-active > *{
+    background: #fff;
+}
+.uk-overlay-background{
+	background: rgba(0, 0, 0, 0.85);
+}
+.uk-main_slider .uk-overlay-panel {
+	line-height: 2;
+}
+.uk-main_slider .uk-overlay-panel > div{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+/* ========================================================================
+  Стили блока услуг / Services block styles
+======================================================================== */
+.uk-services-block{
+	background: url(/images/icons/services-bg.jpg) no-repeat center;
+	background-size: cover;
+	padding: 60px 0;
+}
+.uk-services-block-title{
+	margin-bottom: 40px;
+}
+.uk-services-item-icon{
+	height: 210px;
+	width: 180px;
+	margin: 0 auto;
+}
+.uk-services-item-price{
+	width: 150px;
+	height: 150px;
+	top: 15px;
+	left: 15px;
+	background: #000;
+	z-index: 3;
+}
+.uk-services-item-border-top{
+	width: 180px;
+	height: 15px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.uk-services-item-border-right{
+	width: 15px;
+	height: 150px;
+	background: #fff;
+	position: absolute;
+	top: 15px;
+	right: 0;
+	z-index: 2;
+}
+.uk-services-item-border-bottom{
+	width: 180px;
+	height: 15px;
+	background: #fff;
+	position: absolute;
+	top: 165px;
+	left: 0;
+	z-index: 2;
+}
+.uk-services-item-border-left{
+	width: 15px;
+	height: 150px;
+	background: #fff;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	z-index: 2;
+}
+.uk-services-item-icon:hover .uk-services-item-price{
+	height: 60px;
+	top: 45px;
+	transition: all 0.4s ease;
+}
+.uk-services-item-icon:hover .uk-services-item-border-left,
+.uk-services-item-icon:hover .uk-services-item-border-right{
+	height: 60px;
+	top: 45px;
+	transition: all 0.4s ease;
+}
+.uk-services-item-icon:hover .uk-services-item-border-top{
+	top: 30px;
+	transition: all 0.4s ease;
+}
+.uk-services-item-icon:hover .uk-services-item-border-bottom{
+	top: 105px;
+	transition: all 0.4s ease;
+}
+.uk-services-item-icon-bottom{
+	position: absolute;
+	top: 60px;
+	left: 0;
+	right: 0;
+    height: 60px;
+	z-index: 1;
+}
+.uk-services-item-icon-bottom:before{
+	content: "";
+	width: 94px;
+	height: 15px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 5px;
+	transform: rotate(35deg) skewX(35deg);
+}
+.uk-services-item-icon-bottom:after{
+	content: "";
+	width: 94px;
+	height: 15px;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	right: 5px;
+	transform: rotate(-35deg) skewX(-35deg);
+}
+.uk-services-item-icon:hover .uk-services-item-icon-bottom{
+	top: 120px;
+	transition: all 1.1s ease-in;
+}
+/* ========================================================================
+  Стили блока процесса разработки / Process develop block styles
+======================================================================== */
+.uk-process-title,
+.uk-process-text{
+	margin-bottom: 60px;
+}
+.uk-process-text{
+	line-height: 1.5;
+}
+.uk-process-text-left{
+	padding-right: 20px;
+}
+.uk-process-text-right{
+	padding-left: 20px;
+}
+.uk-process-item-title{
+	margin-top: 35px;
+}
+/* ========================================================================
+  Стили блога / Blog styles
+======================================================================== */
+.uk-blog_latest{
+	padding: 60px 0;
+}
+.uk-blog_latest-title{
+	margin-bottom:45px
+}
+.uk-blog_latest-item-title a{
+	border-bottom: 1px solid #ff9200;
+}
+.uk-blog_latest-item-title a:hover{
+	border-color: transparent;
+}
+/* ========================================================================
+  Стили формы заказа звонка / Requestcall form styles
+======================================================================== */
+.uk-form-requestcall{
+	background: #000;
+	padding: 60px 0 120px;
+}
+.uk-form-title{
+	margin-bottom: 40px;
+}
+.uk-form-requestcall .uk-form-controls{
+	margin-top: 50px;
+}
+.uk-button-sendform{
+	width: 610px;
+	border: 2px solid #ff9200;
+	margin-top: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+	transition: all 0.2s ease;
+}
+.uk-button-sendform:hover{
+	transition: all 0.2s ease;
+}
+/* ========================================================================
+  Стили футера / Footer styles
+======================================================================== */
+.tm-footer{
+	padding-bottom: 40px;
+}
+.tm-footer .uk-panel{
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 25px;
+}
+.tm-footer .tm-logo{
+	line-height: 40px;
+    display: inline-block;
+}
