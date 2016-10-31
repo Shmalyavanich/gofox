@@ -19,7 +19,7 @@ if ($panel == '' && in_array($widget->position, array('top-a', 'top-b', 'bottom-
     $panel = $this['config']->get("panel_default.{$widget->position}.panel", '');
 }
 // Set panel for specific positions
-else if (in_array($widget->position, array('toolbar-r' ,'toolbar-l', 'footer', 'offcanvas'))) {
+else if (in_array($widget->position, array('toolbar-r' ,'toolbar-l', 'offcanvas'))) {
 	$panel = 'uk-panel';
 }
 

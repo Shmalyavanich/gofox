@@ -39,34 +39,38 @@ include($this['path']->path('layouts:theme.config.php'));
 	<?php endif; ?>
 
 	<?php if ($this['widgets']->count('logo + headerbar + slogan + headerbar-right + header-menu')) : ?>
-	<header class="tm-headerbar uk-hidden-small">
+	<header class="tm-headerbar tm-headerbar-home">
 	
-		<div class="uk-container uk-container-center uk-flex uk-flex-middle uk-clearfix">
+		<div class="uk-container uk-container-center uk-clearfix">
 		
 			<?php if ($this['widgets']->count('slogan')) : ?>
-			<div class="uk-slogan uk-h3 uk-text-bold uk-float-left"><?php echo $this['widgets']->render('slogan'); ?></div>
+				<div class="uk-slogan uk-h3 uk-text-bold uk-float-left"><?php echo $this['widgets']->render('slogan'); ?></div>
 			<?php endif; ?>
-			
+				
 			<?php if ($this['widgets']->count('headerbar')) : ?>
-			<div class="uk-float-left"><?php echo $this['widgets']->render('headerbar'); ?></div>
+				<div><?php echo $this['widgets']->render('headerbar'); ?></div>
 			<?php endif; ?>
-			
+				
 			<?php if ($this['widgets']->count('header-menu')) : ?>
-				<div class="uk-header_menu uk-float-left"><?php echo $this['widgets']->render('header-menu'); ?></div>
+				<div class="uk-header_menu uk-header_menu-primary uk-float-left"><?php echo $this['widgets']->render('header-menu'); ?></div>
 			<?php endif; ?>
-			
+				
 			<?php if ($this['widgets']->count('logo')) : ?>
-			<a class="tm-logo" href="<?php echo $this['config']->get('site_url'); ?>"><?php echo $this['widgets']->render('logo'); ?></a>
+				<a class="tm-logo uk-float-left" href="<?php echo $this['config']->get('site_url'); ?>"><?php echo $this['widgets']->render('logo'); ?></a>
 			<?php endif; ?>
 			
-			<?php if ($this['widgets']->count('header-menu-additional')) : ?>
-				<div class="uk-header_menu uk-float-left"><?php echo $this['widgets']->render('header-menu-additional'); ?></div>
+			<?php if ($this['widgets']->count('offcanvas')) : ?>
+				<a href="#offcanvas" class="uk-navbar-toggle uk-hidden-large uk-float-right" data-uk-offcanvas></a>
 			<?php endif; ?>
 			
 			<div class="uk-headerbar-right uk-float-right uk-h3">
 				<?php echo $this['widgets']->render('headerbar-right'); ?>
 			</div>
 			
+			<?php if ($this['widgets']->count('header-menu-additional')) : ?>
+				<div class="uk-header_menu uk-float-right"><?php echo $this['widgets']->render('header-menu-additional'); ?></div>
+			<?php endif; ?>
+				
 		</div>
 		
 	</header>
@@ -82,7 +86,7 @@ include($this['path']->path('layouts:theme.config.php'));
 					<?php endif; ?>
 
 					<?php if ($this['widgets']->count('offcanvas')) : ?>
-					<a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+					<a href="#offcanvas" class="uk-navbar-toggle uk-visible-small uk-visible-medium" data-uk-offcanvas></a>
 					<?php endif; ?>
 
 					<?php if ($this['widgets']->count('search')) : ?>
@@ -106,11 +110,11 @@ include($this['path']->path('layouts:theme.config.php'));
 	<?php endif; ?>
 					
 	<?php if ($this['widgets']->count('top-a')) : ?>
-	<section id="tm-top-a" class="<?php echo $grid_classes['top-a']; echo $display_classes['top-a']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
+	<section id="tm-top-a" class="tm-top-a">
 	
 		<div class="uk-container uk-container-center">
 		
-			<?php echo $this['widgets']->render('top-a', array('layout'=>$this['config']->get('grid.top-a.layout'))); ?>
+			<?php echo $this['widgets']->render('top-a'); ?>
 			
 		</div>
 		
@@ -118,17 +122,19 @@ include($this['path']->path('layouts:theme.config.php'));
 	<?php endif; ?>
 
 	<?php if ($this['widgets']->count('top-b')) : ?>
-	<section id="tm-top-b" class="<?php echo $grid_classes['top-b']; echo $display_classes['top-b']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
-	
-		<?php echo $this['widgets']->render('top-b', array('layout'=>$this['config']->get('grid.top-b.layout'))); ?>
+	<section id="tm-top-b" class="tm-top-b">
+		
+		<div class="uk-container uk-container-center">
+			<?php echo $this['widgets']->render('top-b'); ?>
+		</div>
 		
 	</section>
 	<?php endif; ?>
 
 	<?php if ($this['widgets']->count('main-top + main-bottom + sidebar-a + sidebar-b') || $this['config']->get('system_output', true)) : ?>
-	<div id="tm-middle" class="tm-middle uk-grid" data-uk-grid-match data-uk-grid-margin>
+	<div id="tm-middle" class="tm-middle uk-grid uk-margin-remove" data-uk-grid-match data-uk-grid-margin>
 	
-		<div class="uk-container uk-container-center">
+		<div class="uk-container uk-container-center uk-width-1-1">
 		
 			<?php if ($this['widgets']->count('main-top + main-bottom') || $this['config']->get('system_output', true)) : ?>
 			<div class="<?php echo $columns['main']['class'] ?>">
@@ -168,11 +174,11 @@ include($this['path']->path('layouts:theme.config.php'));
 	<?php endif; ?>
 
 	<?php if ($this['widgets']->count('bottom-a')) : ?>
-	<section id="tm-bottom-a" class="<?php echo $grid_classes['bottom-a']; echo $display_classes['bottom-a']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
+	<section id="tm-bottom-a" class="tm-bottom-a">
 	
 		<div class="uk-container uk-container-center">
 		
-			<?php echo $this['widgets']->render('bottom-a', array('layout'=>$this['config']->get('grid.bottom-a.layout'))); ?>
+			<?php echo $this['widgets']->render('bottom-a'); ?>
 	
 		</div>
 		
@@ -180,9 +186,9 @@ include($this['path']->path('layouts:theme.config.php'));
 	<?php endif; ?>
 
 	<?php if ($this['widgets']->count('bottom-b')) : ?>
-	<section id="tm-bottom-b" class="<?php echo $grid_classes['bottom-b']; echo $display_classes['bottom-b']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin>
+	<section id="tm-bottom-b" class="tm-bottom-b">
 	
-		<?php echo $this['widgets']->render('bottom-b', array('layout'=>$this['config']->get('grid.bottom-b.layout'))); ?>
+		<?php echo $this['widgets']->render('bottom-b'); ?>
 	
 	</section>
 	<?php endif; ?>
@@ -207,7 +213,24 @@ include($this['path']->path('layouts:theme.config.php'));
 	</footer>
 	<?php endif; ?>
 
-
+	<?php if ($this['widgets']->count('modal-a')) : ?>
+		<div id="modal-a" class="uk-modal uk-modal-block">
+			<div class="uk-modal-dialog">
+				<a class="uk-modal-close uk-close"></a>
+				<?php echo $this['widgets']->render('modal-a'); ?>
+			</div>
+		</div>
+	<?php endif; ?>
+	
+	<?php if ($this['widgets']->count('modal-b')) : ?>
+		<div id="modal-b" class="uk-modal uk-modal-block">
+			<div class="uk-modal-dialog">
+				<a class="uk-modal-close uk-close"></a>
+				<?php echo $this['widgets']->render('modal-b'); ?>
+			</div>
+		</div>
+	<?php endif; ?>
+	
 	<?php echo $this->render('footer'); ?>
 
 	<?php if ($this['widgets']->count('offcanvas')) : ?>

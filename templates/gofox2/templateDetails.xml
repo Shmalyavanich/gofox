@@ -56,6 +56,8 @@
         <position>main-bottom</position>
         <position>sidebar-a</position>
         <position>sidebar-b</position>
+        <position>modal-a</position>
+        <position>modal-b</position>
         <position settings="">footer</position>
         <position settings="">offcanvas</position>
         <position settings="">debug</position>

@@ -28,4 +28,9 @@
 		<position name="description">Description</position>
 		<position name="links">Links</position>
 	</positions>
+	<positions layout="uikit_custom">
+		<position name="title">Заголовок</position>
+		<position name="subtitle">Подзаголовок</position>
+		<position name="media">Изображение</position>
+	</positions>
 </renderer>

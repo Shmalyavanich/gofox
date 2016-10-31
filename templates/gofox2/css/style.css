@@ -21,14 +21,71 @@ a, a:hover, a:focus{
 }
 .uk-slide-title{
 	font-size: 40px;
-	line-height: 46px;
-	text-transform: uppercase;
+	line-height: 50px;
 	font-weight: bold;
 }
 .uk-slide-selected{
 	font-size: 40px;
-	line-height: 46px;
+	line-height: 56px;
 	text-transform: uppercase;
+	font-weight: bold;
+	background: #fff;
+	color: #000;
+	display: inline-block;
+	padding: 0 20px;
+}
+.uk-bordered{
+	padding: 20px 40px;
+	border: 3px solid #e5f0ff;
+	transition: all 0.2s ease;
+}
+.uk-bordered:hover{
+	background: #0067f4;
+	border-color: #0067f4;
+	color: #fff !important;
+	transition: all 0.2s ease;
+}
+.uk-bordered > *,
+.uk-bordered:hover > *{
+	transition: all 0.2s ease;
+}
+.uk-bordered:hover > *{
+	color: #fff !important;
+}
+.uk-inline-block{
+	display: inline-block;
+}
+.uk-close,
+.uk-close:hover{
+	opacity: 1;
+}
+.uk-close{
+	color: #969696;
+}
+.uk-close:hover{
+	color: #ff2828;
+}
+.uk-close:after{
+	content: "×";
+	display: block;
+    font-family: 'Open Sans';
+    font-size: 28px;
+}
+.uk-modal .uk-form{
+	padding: 10px 20px;
+}
+.uk-form textarea{
+	height: 90px;
+}
+.uk-button{
+	border: 2px solid #ff9200;
+	transition: all 0.2s ease;
+}
+.uk-button:hover{
+	transition: all 0.2s ease;
+}
+.uk-button-primary{
+	border: 3px solid #fff;
 	font-weight: bold;
 }
 /* ========================================================================
@@ -39,25 +96,38 @@ a, a:hover, a:focus{
     margin-bottom: 0;
 }
 .tm-headerbar{
+	padding: 20px 0;
+}
+.tm-headerbar-home{
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 10;
-	padding: 10px 0;
+}
+.tm-headerbar-inner{
+	background: #0067f4;
 }
 .tm-logo{
-	padding: 10px 40px 20px;
-	margin: 0 20px;
+	padding: 10px 20px 20px;
 }
-.uk-header_menu{
-	
+.tm-logo{
+	width: 100px;
+}
+.uk-header_menu,
+.uk-headerbar-right{
+	margin-top: 17px;
+}
+.uk-header_menu-primary{
+	margin-left: -20px;
 }
 .uk-nav-header_menu > li{
 	display: inline-block;
 }
-.uk-nav-header_menu > li + li{
-	margin-left: 40px;
+.tm-logo,
+.uk-nav-header_menu > li + li,
+.uk-header-contacts{
+	margin-left: 35px;
 }
 .uk-nav-header_menu > li > a{
 	font-size: 16px;
@@ -66,238 +136,187 @@ a, a:hover, a:focus{
 .uk-nav-header_menu > li > a[href="#"]{
 	color: rgba(255, 255, 255, 0.5);
 }
-.uk-header-contacts{
-	margin-left: 60px;
+
+.uk-header-contacts a{
+	padding: 3px 0;
+	display: inline-block;
 }
-.uk-header-phone{
-	
+.uk-navbar-toggle{
+	padding: 5px;
+    margin-left: 60px;
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+	margin-top: 10px;
+}
+.uk-navbar-toggle:after{
+	content: "";
+    display: block;
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwLjEyMyA2MC4xMjMiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDYwLjEyMyA2MC4xMjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMzJweCIgaGVpZ2h0PSIzMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNTcuMTI0LDUxLjg5M0gxNi45MmMtMS42NTcsMC0zLTEuMzQzLTMtM3MxLjM0My0zLDMtM2g0MC4yMDNjMS42NTcsMCwzLDEuMzQzLDMsM1M1OC43ODEsNTEuODkzLDU3LjEyNCw1MS44OTN6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBkPSJNNTcuMTI0LDMzLjA2MkgxNi45MmMtMS42NTcsMC0zLTEuMzQzLTMtM3MxLjM0My0zLDMtM2g0MC4yMDNjMS42NTcsMCwzLDEuMzQzLDMsMyAgIEM2MC4xMjQsMzEuNzE5LDU4Ljc4MSwzMy4wNjIsNTcuMTI0LDMzLjA2MnoiIGZpbGw9IiNGRkZGRkYiLz4KCTxwYXRoIGQ9Ik01Ny4xMjQsMTQuMjMxSDE2LjkyYy0xLjY1NywwLTMtMS4zNDMtMy0zczEuMzQzLTMsMy0zaDQwLjIwM2MxLjY1NywwLDMsMS4zNDMsMywzUzU4Ljc4MSwxNC4yMzEsNTcuMTI0LDE0LjIzMXoiIGZpbGw9IiNGRkZGRkYiLz4KCTxjaXJjbGUgY3g9IjQuMDI5IiBjeT0iMTEuNDYzIiByPSI0LjAyOSIgZmlsbD0iI0ZGRkZGRiIvPgoJPGNpcmNsZSBjeD0iNC4wMjkiIGN5PSIzMC4wNjIiIHI9IjQuMDI5IiBmaWxsPSIjRkZGRkZGIi8+Cgk8Y2lyY2xlIGN4PSI0LjAyOSIgY3k9IjQ4LjY2MSIgcj0iNC4wMjkiIGZpbGw9IiNGRkZGRkYiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K)
 }
 /* ========================================================================
   Стили слайдера / Slider styles
 ======================================================================== */
+.uk-slide{
+	width: 100%;
+	height: 550px;
+}
+.uk-slide-media2{
+	bottom: 0;
+	max-width: 65%;
+}
+.uk-media2-aligment-left{
+	left: 0;
+}
+.uk-media2-aligment-right{
+	right: 0;
+}
+.uk-slide-content{
+	z-index: 5;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #fff;
+}
+.uk-slide-content > div{
+	height: 100%;
+}
+.uk-content-aligment-left{
+	left: 15px;
+	padding-right: 15px;
+}
+.uk-content-aligment-right{
+	right: 15px;
+	text-align: right;
+	padding-left: 15px;
+}
 .uk-slider-nav-wrapper{
     top: 0;
-    left: 0;
-    bottom: 0;
+    left: 30px;
+    bottom: 35px;
     right: 0;
     z-index: 1;
 }
-.uk-slider-nav-wrapper > div{
-    height: 100%;
+.uk-slider-nav-wrapper li{
+	padding: 0;
+	position: relative;
 }
-.uk-slider-nav-wrapper .uk-dotnav{
-    display: block;
+.uk-slider-nav-wrapper li + li{
+	margin-left: 10px;
 }
-.uk-slider-nav-wrapper .uk-dotnav > *{
-    float: none;
-    margin-top: 0;
-    padding-left: 0;
+.uk-slider-nav-wrapper li + li:after{
+	content: "";
+	position: absolute;
+	left: -12px;
+	top: 50%;
+	width: 14px;
+	border-bottom: 1px solid #fff;
 }
-.uk-slider-nav-wrapper .uk-dotnav > * + *{
-    margin-top: 5px;
-}
-.uk-slider-nav-wrapper .uk-dotnav > * > *{
-    width: 12px;
+.uk-slider-nav-wrapper li a{
+	width: 12px;
     height: 12px;
-    background: transparent;
-    border: solid 2px #fff;
+	background: transparent;
+	border: 2px solid #fff;
+	opacity: 1;
 }
-.uk-slider-nav-wrapper .uk-dotnav > * > *:hover,
-.uk-slider-nav-wrapper .uk-dotnav > .uk-active > *{
-    background: #fff;
+.uk-slider-nav-wrapper li.uk-active a,
+.uk-slider-nav-wrapper li a:hover{
+	background: #fff;
+	opacity: 1;
 }
-.uk-overlay-background{
-	background: rgba(0, 0, 0, 0.85);
+.uk-slider-nav-wrapper li.uk-active a{
+	transform: scale(0.8);
 }
-.uk-main_slider .uk-overlay-panel {
-	line-height: 2;
+/* ========================================================================
+  Стили хлебных крошек / Breadcrumbs styles
+======================================================================== */
+.uk-breadcrumb{
+	margin-top: 20px;
 }
-.uk-main_slider .uk-overlay-panel > div{
-    position: absolute;
-    left: 0;
-    right: 0;
+.uk-breadcrumb a{
+	color: #0067f4;
 }
 /* ========================================================================
   Стили блока услуг / Services block styles
 ======================================================================== */
-.uk-services-block{
-	background: url(/images/icons/services-bg.jpg) no-repeat center;
+.uk-services{
+	padding-top: 40px;
+}
+.uk-services-logo img{
+	height: 145px;
+}
+.uk-services-description{
+	max-width: 400px;
+}
+/* ========================================================================
+  Стили блока Предложения / Offer block styles
+======================================================================== */
+.uk-offer{
+	background: url(/images/icons/offer-bg.jpg) no-repeat center;
 	background-size: cover;
-	padding: 60px 0;
+	padding: 70px 0 80px;
 }
-.uk-services-block-title{
-	margin-bottom: 40px;
-}
-.uk-services-item-icon{
-	height: 210px;
-	width: 180px;
-	margin: 0 auto;
-}
-.uk-services-item-price{
-	width: 150px;
-	height: 150px;
-	top: 15px;
-	left: 15px;
-	background: #000;
-	z-index: 3;
-}
-.uk-services-item-border-top{
-	width: 180px;
-	height: 15px;
-	background: #fff;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
-}
-.uk-services-item-border-right{
-	width: 15px;
-	height: 150px;
-	background: #fff;
-	position: absolute;
-	top: 15px;
-	right: 0;
-	z-index: 2;
-}
-.uk-services-item-border-bottom{
-	width: 180px;
-	height: 15px;
-	background: #fff;
-	position: absolute;
-	top: 165px;
-	left: 0;
-	z-index: 2;
-}
-.uk-services-item-border-left{
-	width: 15px;
-	height: 150px;
-	background: #fff;
-	position: absolute;
-	top: 15px;
-	left: 0;
-	z-index: 2;
-}
-.uk-services-item-icon:hover .uk-services-item-price{
-	height: 60px;
-	top: 45px;
-	transition: all 0.4s ease;
-}
-.uk-services-item-icon:hover .uk-services-item-border-left,
-.uk-services-item-icon:hover .uk-services-item-border-right{
-	height: 60px;
-	top: 45px;
-	transition: all 0.4s ease;
-}
-.uk-services-item-icon:hover .uk-services-item-border-top{
-	top: 30px;
-	transition: all 0.4s ease;
-}
-.uk-services-item-icon:hover .uk-services-item-border-bottom{
-	top: 105px;
-	transition: all 0.4s ease;
-}
-.uk-services-item-icon-bottom{
-	position: absolute;
-	top: 60px;
-	left: 0;
-	right: 0;
-    height: 60px;
-	z-index: 1;
-}
-.uk-services-item-icon-bottom:before{
-	content: "";
-	width: 94px;
-	height: 15px;
-	background: #fff;
-	position: absolute;
-	top: 0;
-	left: 5px;
-	transform: rotate(35deg) skewX(35deg);
-}
-.uk-services-item-icon-bottom:after{
-	content: "";
-	width: 94px;
-	height: 15px;
-	background: #fff;
-	position: absolute;
-	top: 0;
-	right: 5px;
-	transform: rotate(-35deg) skewX(-35deg);
-}
-.uk-services-item-icon:hover .uk-services-item-icon-bottom{
-	top: 120px;
-	transition: all 1.1s ease-in;
-}
-/* ========================================================================
-  Стили блока процесса разработки / Process develop block styles
-======================================================================== */
-.uk-process-title,
-.uk-process-text{
-	margin-bottom: 60px;
-}
-.uk-process-text{
-	line-height: 1.5;
-}
-.uk-process-text-left{
-	padding-right: 20px;
-}
-.uk-process-text-right{
-	padding-left: 20px;
-}
-.uk-process-item-title{
-	margin-top: 35px;
-}
-/* ========================================================================
-  Стили блога / Blog styles
-======================================================================== */
-.uk-blog_latest{
-	padding: 60px 0;
-}
-.uk-blog_latest-title{
-	margin-bottom:45px
-}
-.uk-blog_latest-item-title a{
-	border-bottom: 1px solid #ff9200;
-}
-.uk-blog_latest-item-title a:hover{
-	border-color: transparent;
-}
-/* ========================================================================
-  Стили формы заказа звонка / Requestcall form styles
-======================================================================== */
-.uk-form-requestcall{
-	background: #000;
-	padding: 60px 0 120px;
-}
-.uk-form-title{
-	margin-bottom: 40px;
-}
-.uk-form-requestcall .uk-form-controls{
-	margin-top: 50px;
-}
-.uk-button-sendform{
-	width: 610px;
-	border: 2px solid #ff9200;
-	margin-top: 40px;
-	text-transform: uppercase;
-	font-weight: bold;
-	transition: all 0.2s ease;
-}
-.uk-button-sendform:hover{
-	transition: all 0.2s ease;
+.uk-offer-desc,
+.uk-offer-second_desc{
+	line-height: 20px;
 }
 /* ========================================================================
   Стили футера / Footer styles
 ======================================================================== */
 .tm-footer{
-	padding-bottom: 40px;
+	padding: 40px 0 60px;
 }
-.tm-footer .uk-panel{
-	display: inline-block;
-	vertical-align: top;
-	margin-right: 25px;
+/* ========================================================================
+  Медиа запросы / Media queries
+======================================================================== */
+@media (max-width: 1219px){
+	.tm-logo,
+	.uk-nav-header_menu > li + li,
+	.uk-header-contacts{
+		margin-left: 3px;
+	}
+	.uk-slide-media2 {
+		max-width: 70%;
+	}
 }
-.tm-footer .tm-logo{
-	line-height: 40px;
-    display: inline-block;
+@media (max-width: 959px){
+	.uk-nav-header_menu > li + li,
+	.uk-header-contacts{
+		margin-left: 20px;
+	}
+	.tm-logo{
+		padding: 10px 0;
+		margin-left: 0;
+	}
+	.uk-slider-nav-wrapper{
+		left: 15px;
+	}
+	.uk-slide-media2 {
+		max-width: 80%;
+	}
+}
+@media (max-width: 767px){
+	.uk-slide-media2 {
+		max-width: 100%;
+	}
+}
+@media (max-width: 479px){
+	.uk-headerbar-right{
+		display: none;
+	}
+	.uk-slide-content {
+		padding-top: 50px;
+	}
+	.uk-slider-nav-wrapper{
+		bottom: 10px;
+	}
 }
